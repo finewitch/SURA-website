@@ -1,0 +1,89 @@
+/*560px*/
+@media only screen and (max-width:576px){
+	.landing_page{
+		background: url('../img/markup/landing-pg-mobile.jpg')no-repeat center center fixed;
+	}
+	.authors {
+    	font-size: 170%;
+	}
+	.main_logo {
+    	max-width: 70%;
+	}
+	.navigation_icon {
+   		margin-left: 0;
+	}
+	.main_content_header {
+    	margin: 50px 10px;
+	}
+	.header_article {
+    	margin: 0 20px;
+    }
+    .header_article h2{
+    	font-size:120%;
+    }
+    .article_photo_pair{
+		flex-wrap: wrap;
+	}
+	.pic {
+   		order: -1;
+    }
+    .pic_wrapper img{
+    	max-width:100%;
+	}
+	.text {
+		padding-top:6%;
+    	padding-right: 4%;
+    	padding-left: 4%;
+	}
+	.photo_signature {
+	    text-align: right;
+	    margin-top: 20px;
+	    color: #aa1919;
+	    font-size: 0.90em;
+	}
+	/*buy-book-sec*/
+	.buy_book_section {
+    	flex-direction: column;
+	}
+	.buy_book_button span {
+     	margin-left: 10px; 
+	}
+	/*about-authors*/
+	.about_authors {
+		flex-direction: column;
+		margin-top:30px;
+	}
+	.author_column1, .author_column2 {
+    	margin-right: 0;
+    	flex-basis: auto;
+	}
+	/*order-book*/
+	.flex-forms {
+	    width: 800px;
+	    flex-direction: column;
+	}
+	.flex-forms > div:first-child {
+	    text-align: center;
+	    padding-right: 0;
+	}
+	.flex-forms > div {
+	    flex-basis: 250px;
+	    margin: 0px auto;
+	}
+}
+@media only screen and (max-width:1210px){
+	.header_article {
+    	margin: 0 20px;
+    }
+	.pic {
+    	flex-basis: auto;
+	}
+	.photo_signature {
+    	margin-top: 30px;
+	}
+	.text {
+     	flex-basis: auto;
+     } 
+}
+
+

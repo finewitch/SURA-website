@@ -1,0 +1,356 @@
+/*
+ * www.przeswit.com
+ * Copyright 2017,JM
+ *finewitch@gmail.com
+*/
+/*Base - site components*/
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/normalize";
+@import "../bootstrap-sass-3.3.7/assets/stylesheets/bootstrap";
+/*GENERAL*/
+html{
+  box-sizing: border-box;
+}
+html, body{
+  height: 100%;
+  box-sizing: border-box;
+  font: 100% $main-font;
+  margin: 0;
+  padding: 0;
+  background-color: $white;
+}
+h1{
+  font-weight: 300;    
+}
+.interline{
+  line-height: 1.5;
+}
+.transition{
+  transition: ease 0.5s;
+  }
+a {
+  color: $black;
+  &:hover {
+    text-decoration:none;
+  }
+}
+a:hover, a:focus { 
+  text-decoration: none;
+}
+a:focus {
+    outline: none;
+
+}
+/*Jquery animation class*/
+.showClass{
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
+}
+/*LANDING-PAGE*/
+.main-flex-container{
+  display: flex;
+  flex-direction: column;
+}
+.flex-item{
+  min-height: 100vh;
+}
+.landing_page{
+  background: url('../img/markup/landing-pg-img.jpg') no-repeat center center fixed; 
+  text-align: center;
+}
+ .main_content_header{
+    margin:140px auto;  
+ }
+.authors{
+  padding-top:12%;
+  color: $white;
+  font: 230% $main-font;
+  font-weight: 300;
+  & > p {
+      text-align: center;
+      line-height:45px;
+  }
+}
+.scroll-down, .branding{
+  margin-top:100px;
+}
+.main_logo{
+  width:670px;
+  max-width:90%;
+}
+.bottom-row{
+    margin-top:150px;
+ }
+ /*NAV*/
+ .navigation_icon{
+  margin-left:80px;
+ }
+ /*HEADER*/
+.header_article{
+  margin: 0 auto;
+  max-width:1370px;
+  text-justify: inter-word;
+  text-align: justify;
+ }
+header {
+  & h1{
+  text-align: center;
+  }
+}  
+article {
+  & h2{
+    @extend .interline;
+    font-weight:300;
+  }
+}
+ /*MAIN CONTENT*/
+.pic_wrapper img{
+    max-width:765px;
+}
+.text_wrapper p{
+  max-width: 370px;
+}
+.article_photo_pair{
+  display: flex;
+  align-items: stretch;
+}
+.text{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 450px;
+  height:510px;
+  flex-grow:1;
+  align-self: center;
+  align-items: flex-end;
+  padding-right: 4%;
+}
+.pic{
+  flex-basis:765px;
+  flex-grow:1;
+  align-self: center;
+}
+.photo_signature{
+    text-align: right;
+    margin-top: 60px;
+    color: $red;
+    font-size: 0.90em;
+ }
+ .text-wrapper{
+    padding-right: 3%;
+ }
+ .red-colored{
+    color: $red;
+  }
+/*BUY BOOK SECTION*/
+.buy_book_section{
+  display: flex;
+  align-items: center;
+  min-height: 80vh;
+}
+.book_gallery{
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+.book_details{
+  flex-grow: 2;
+  margin: 30px 0 0 30px;
+  & > ol{
+    list-style: none;
+    font-size: 110%;
+    line-height: 2.6em;
+    }
+}
+ .btn-default{
+    display: inline-block;
+    font-size: 19px;
+    border: 1px solid $black;
+    border-radius: 0;
+    @extend .transition;
+}
+.buy_book_button{
+  margin-top: 20px;
+  span{
+    margin-left: 30px;
+  }
+}
+.about_authors{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a:hover{
+  color: $red;
+  }
+}
+.about_authors img{
+  width:600px;
+}
+.author_column1{
+  flex-basis: 600px;
+  margin-right:20px;
+
+}
+.author_column2{
+  @extend .author_column1;
+}
+.authors_description{
+  width:90%;
+  margin: 50px auto;
+  text-align: center;
+  .red-colored{
+    font-size:140%;
+    text-align: center;
+  }
+  p{
+    margin-top: 20px;
+    text-align: left;
+    line-height:1.7;
+    font-size:105%;
+  }
+}
+/*FOOTER*/
+.footer{
+  background-color: $dark-blue;
+  min-height:70vh;
+}
+.company_informations_contact{
+  text-align: center;
+  color: $dark-gray;
+  a{
+    color: $dark-gray;
+  }
+  a:hover{
+    color: $red;
+    transition: 0.5s ease;
+  }
+  ol{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  li{
+    margin-top: 20px;
+  }
+  li.company_name{
+    margin-top:30px;
+    font-size: 200%;
+  }
+  li.company_logo{
+    margin-top:70px;
+  }
+}
+li.modal_components{
+  margin: 30px 30px;
+  padding: 10px;
+  a{  
+    color: $gray;
+    font-size: 120%;
+    }
+  & :nth-child(2){
+    margin-left:20px;
+  }
+}
+/*additional styles for BOOTSTRAP-MODALS*/
+.modal-title {
+  color: $red;
+}
+.modal-title,
+.modal-body p, 
+.modal-footer p{
+  text-align: center;
+  }
+.modal-dialog{
+    margin: 100px auto;
+  }
+.table-condensed > tbody > tr > td{
+    padding: 10px;
+  }
+.table {
+  margin-bottom: 0;
+}
+.close {
+    font-size: 29px;
+    }
+/*Regulations - subpage*/
+.contract_cancellation{
+  margin-top:100px;
+  text-align: center;
+}
+.contract_file{
+  margin: 50px auto;
+  a{
+    color:$light-gray;
+  }
+}
+.main_container_regulations{
+  max-width:1240px;
+  margin: 0 auto;
+  width:90%;
+  font-size:110%;
+  & ol>li{
+    font-weight: 200;
+    text-align: justify;
+  }
+  h2{
+    text-align:center;
+    margin: 70px auto;
+  }
+}
+.table_of_contents{
+  font-size: 110%;
+  ol{
+    list-style-type: upper-roman;
+  }
+  li{
+    padding:5px;
+  }
+  a:hover{
+    color: $red;
+  }
+}
+section.reg-last-section-margin{
+  margin-bottom:100px;
+}
+.no-style{
+  list-style: none;
+}
+/*BOOK-ORDER -subpage*/
+.order-header{
+  margin: 50px auto;
+}
+.nav-centered{
+  text-align: center;
+  margin: 20px auto;
+}
+.flex-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  height:100vh;
+}
+.flex-forms{
+  width:800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-forms > div{
+  flex-basis:250px;
+  margin: 30px auto;
+}
+.flex-forms > div:first-child{
+  text-align: right;
+  padding-right:50px;
+}
+.flex-forms > div > input{
+  padding:10px;
+  width:250px;
+  text-align: center;
+}
+.border-red{
+  border:1px solid $red;
+}

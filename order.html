@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <title>WYDAWNICTWO PRZEŚWIT. Zamów książkę</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content= "Joanne Moustache">
+    <meta name="copyright" content="Copyright 2017">
+    <meta name="reply-to" content="finewitch@gmail.com">
+    <!--MT-fb-->
+    <meta property="og:site_name" content="Wydawnictwo Przeswit.">
+    <meta name="description" content="Fotografie i miniatury reportażowe z rewolucji i wojny w Syrii">
+    <meta property="og:description" content="Sura.Fotografie i miniatury reportażowe z rewolucji i wojny w Syrii">
+    <meta property="og:type" content="book">
+    <meta property="og:image" content="http://www.przeswit.com/img/content/book_cover.jpg">
+    <!--fav-icon-->
+    <link rel="icon" href="img/markup/my_fav.ico" type="image/x-icon">
+    <!--js-->
+    <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-only-modal-min.js"></script> 
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400&amp;subset=latin-ext" rel="stylesheet">
+    <!--style-->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/media-queries.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class="order-header">
+      <h1>Dane do wysyłki</h1>
+    </header>
+    <nav class="nav-centered">
+        <button type="button" onClick="history.go(-1); return false;">powrót</button>
+    </nav>
+    <!--details provided by the payPal company-->
+    <form name="p24" action="https://cart.przelewy24.pl/index/add" method="post" accept-charset="utf-8">
+      <input type="hidden" name="p24_crc" value="468f0cdc44a85422b17bbc1f6806b9f44720fbe1">
+      <input type="hidden" name="p24_id_salesman" value="48935">
+      <input type="hidden" name="p24_salesman_key" value="4f830be1">
+      <input type="hidden" name="p24_currency" value="pln">
+      <input type="hidden" name="p24_name" value="Książka SURA">
+      <input type="hidden" name="p24_amount" value="3800">
+      <input type="hidden" name="p24_add" value="1">
+    <!--details-end-->
+      <div class="flex-wrapper">
+        <div class="flex-forms">
+          <div>Nazwa produktu:</div>
+          <div><input type="text" value="Książka SURA" class="border-red" readonly></div>
+          <div></div>
+        </div>
+        <div class="flex-forms">
+          <div>Ilość:</div>
+          <div><input type="text" value="1" name="p24_number" class="border-red" maxlength="4"></div>
+          <div></div>
+        </div>
+        <div class="flex-forms">
+          <div>Imię i nazwisko/Nazwa firmy:</div>
+          <div><input type="text" name="p24_k_client" required></div>
+          <div></div>
+        </div>
+        <div class="flex-forms">
+          <div>Ulica:</div>
+          <div><input type="text" name="p24_k_address" required></div>
+          <div></div>
+        </div>
+        <div class="flex-forms">
+          <div>Miasto: </div>
+          <div><input type="text" name="p24_k_city" required></div>
+          <div></div>
+        </div>
+        <div class="flex-forms">
+          <div>Kod pocztowy:</div>
+          <div><input type="text" name="p24_k_post_code" required></div>
+          <div></div>
+        </div>
+        <div class="flex-forms">
+          <div>Adres e-mail:</div>
+          <div><input type="email" name="p24_k_email" required></div>
+          <div></div>
+        </div>
+        <div class="flex-forms">
+          <div></div>
+          <div><input type="submit" value="Dodaj do koszyka"></div>
+          <div></div>
+        </div>
+      </div>
+    </form>
+    <div class="flex-item footer">
+      <div class="company_informations_contact">
+          <ol>
+              <li class="modal_components"><a href="#myModal" data-toggle="modal" data-target="#myModal">dostawa i opłaty</a>
+              <a href="regulamin.html" class="margin_left">regulamin</a></li>
+              <li class="company_logo"><img src="img/content/logo_short.png" alt="small-logo-icon"></li>
+              <li class="company_name">Prześwit</li>
+              <li>Nr konta: 72 1910 1048 2753 7791 6813 0001, Deutsche Bank</li>
+              <li>Księgarnia internetowa: <a href="mailto:ksiegarnia@przeswit.com">ksiegarnia@przeswit.com</a></li>
+              <li>Redakcja: <a href="mailto:redakcja@przeswit.com">redakcja@przeswit.com</a></li>
+              <li>Telefon: (+48) 503 079 466</li>
+              <li>NIP: 1251344097</li>
+              <li>REGON: 360989510</li>
+              <li><a href="https://www.facebook.com/przeswit/?fref=ts" target="_blank">
+              <img src="img/content/logo_fb_short.png" alt="-small-fb-icon"></a></li>
+          </ol>
+      </div>
+    </div>
+    <!--Modals that provides informations for delivery and general regulations-->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Dostawa i opłaty</h4>
+            </div>
+            <div class="modal-body">
+              <p>Książki dostarcza Poczta Polska.<br>
+                W wypadku zamówień w kraju o wartości od 150 zł kupujący nie ponosi kosztów dostawy.</p>
+              <div class="table-responsive">
+            <table class="table table-condensed">
+                <tr>
+                    <td>Obszar</td>  
+                    <td>Rodzaj przesyłki</td>  
+                    <td>Koszt dostawy</td>   
+                    <td>Czas realizacji zamówienia</td>
+                </tr>
+                <tr>
+                    <td>Polska</td>  
+                    <td>przesyłka ekonomiczna</td>   
+                    <td>12,00 zł</td>  
+                    <td>3-6 dni</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>przesyłak priorytetowa</td>
+                    <td>15,00 zł</td>  
+                    <td>2-4 dni</td>
+                </tr>
+                <tr>
+                    <td>Europa</td>  
+                    <td>przesyłka ekonomiczna</td> 
+                    <td>27,00 zł</td>  
+                    <td>6-12 dni</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>przesyłka priorytetowa</td>  
+                    <td>55,00 zł</td>  
+                    <td>4-10 dni</td>
+                </tr>
+                <tr>
+                    <td>Świat</td> 
+                    <td>przesyłka ekonomiczna</td> 
+                    <td>80,00 zł</td>   
+                    <td>zależny od kraju</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>przesyłka priorytetowa</td>  
+                    <td>130,00 zł</td>  
+                    <td>zależny od kraju</td>
+                </tr>
+            </table>
+        </div>
+        </div>
+        <div class="modal-footer">
+        <p>Książki można zakupić na stronie internetowej, dokonując opłaty poprzez Przelewy24.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

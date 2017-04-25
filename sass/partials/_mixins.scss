@@ -1,0 +1,35 @@
+@mixin centered-flex()
+{
+	 display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin table-style($display, $list-style, $margin, $padding) {
+  display: $display;
+  list-style: $list-style;
+  margin: $margin;
+  padding: $padding;
+}
+$break-xsmall: 450px;//!
+$break-small: 768px;
+$break-middle: 992px;//!
+$break-large: 1300px;
+
+@mixin respond-to($media) {
+	@if $media == xsphones {
+    @media only screen and (max-width: $break-xsmall) { @content; }
+  }
+  @if $media == phones {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+   @else if $media == middle-screens {
+    @media only screen and (min-width: $break-small) { @content; }
+  }
+   @else if $media == large-screens {
+    @media only screen and (min-width: $break-middle) { @content; }
+  }
+  @else if $media == xllarge-screens {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+}
