@@ -10,7 +10,7 @@
     	max-width: 70%;
 	}
 	.navigation_icon {
-   		margin-left: 0;
+   		display: none;
 	}
 	.main_content_header {
     	margin: 50px 10px;
